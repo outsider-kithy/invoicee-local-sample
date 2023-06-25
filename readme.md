@@ -10,11 +10,11 @@
 
 `chap03` 第3章　ログイン機能の作成
 
-`chap04` 第4章 CRUD機能の実装
+`chap04` 第4章　CRUD機能の実装
 
-`chap05` 第5章 請求書発行機能を作成
+`chap05` 第5章　請求書発行機能を作成
 
-`chap06` 第6章 管理画面の作成
+`chap06` 第6章　管理画面の作成
 
 
 ## サンプルコードの実行方法
@@ -45,4 +45,4 @@ outsider-kithy
 
 mail:info@outsider-design-tech.net
 
-URL:outsider-design-tech.net
+URL:https://outsider-design-tech.net
