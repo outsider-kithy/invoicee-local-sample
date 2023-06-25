@@ -42,5 +42,7 @@ flask run
 
 ## 作者
 outsider-kithy
+
 mail:info@outsider-design-tech.net
+
 URL:outsider-design-tech.net
