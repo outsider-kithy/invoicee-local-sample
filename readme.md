@@ -4,9 +4,9 @@
 
 章ごとの最終形のコードが格納されています。
 
-`chap01` 第1章　Flaskでの仮想環境構築と「Hello, World」
+`chap01` 第1章　はじめに
 
-`chap02` 第2章　ディレクトリ構成とBlueprintによる分割
+`chap02` 第2章　ディレクトリ構成とBlueprintによる機能の分割
 
 `chap03` 第3章　ログイン機能の作成
 
@@ -23,8 +23,8 @@
 ```shell
 #実行したい章のルートディレクトリに移動
 cd chap01
-#仮想環境venvをアクティベート
-source venv/bin/activate
+#仮想環境.venvをアクティベート
+source .venv/bin/activate
 #flaskを起動
 flask run
 ```
