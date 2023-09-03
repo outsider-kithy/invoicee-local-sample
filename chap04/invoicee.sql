@@ -1,34 +1,23 @@
 #初期化
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS jobs;
 DROP TABLE IF EXISTS clients;
-DROP TABLE IF EXISTS works;
-DROP TABLE IF EXISTS contents;
 DROP TABLE IF EXISTS tax;
+DROP TABLE IF EXISTS works;
+DROP TABLE IF EXISTS jobs;
+DROP TABLE IF EXISTS contents;
 
-#テーブル作成
-CREATE TABLE users(
-    id SERIAL PRIMARY KEY,
-    username TEXT NOT NULL,
-    password TEXT NOT NULL
-);
-
-CREATE TABLE users(
-    id SERIAL PRIMARY KEY,
-    username TEXT NOT NULL,
-    password TEXT NOT NULL
-);
-
+#clients,tax,tools,works,jobs,contentsの各テーブルを作成
 CREATE TABLE clients (
         id INTEGER NOT NULL,
         client_name VARCHAR,
         PRIMARY KEY (id)
 );
+
 CREATE TABLE tax (
     id INTEGER NOT NULL,
     rate NUMERIC(4,2) NOT NULL,
     PRIMARY KEY(id)
 );
+
 CREATE TABLE tools (
     id INTEGER NOT NULL,
     tool_type VARCHAR,
@@ -38,6 +27,7 @@ CREATE TABLE tools (
     FOREIGN KEY (tax_rate_id) REFERENCES tax (id),
     PRIMARY KEY(id)
 );
+
 CREATE TABLE works (
     id INTEGER NOT NULL,
     work_type VARCHAR,
@@ -47,6 +37,7 @@ CREATE TABLE works (
     FOREIGN KEY (tax_rate_id) REFERENCES tax (id),
     PRIMARY KEY(id)
 );
+
 CREATE TABLE jobs(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
