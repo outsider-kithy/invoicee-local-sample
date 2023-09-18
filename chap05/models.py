@@ -6,8 +6,10 @@ import datetime
 from sqlalchemy.sql.sqltypes import Date
 from flask_login import UserMixin
 
-#データベース関係の設定
+#Macの場合はこちら
 DATABASE_URL = 'postgresql://localhost/invoicee'
+#Windowsの場合はこちら
+#DATABASE_URL = 'postgresql://postgres:postgres@localhost:5432/invoicee'
 engine = create_engine(DATABASE_URL,isolation_level='AUTOCOMMIT')
 Base = declarative_base()
 db_uri = os.environ.get(DATABASE_URL)

@@ -7,7 +7,10 @@ from flask_login import LoginManager,login_manager
 
 from models import session, User
 
+#Macの場合はこちら
 DATABASE_URL = 'postgresql://localhost/invoicee'
+#Windowsの場合はこちら
+#DATABASE_URL = 'postgresql://postgres:postgres@localhost:5432/invoicee'
 engine = create_engine(DATABASE_URL,isolation_level='AUTOCOMMIT')
 Base = declarative_base()
 db_uri = os.environ.get(DATABASE_URL)
