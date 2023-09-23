@@ -1,6 +1,6 @@
 # このチャプターのサンプルコードの環境構築
-※この章はPostgreSQLのインストール及びSQLAlchemy等のライブラリのインストールが必要です。
-PostgreSQLとライブラリのインストール方法は、テキストの第3章・2節以降を参照してください。
+※この章はPostgreSQLのがインストールが必要です。
+PostgreSQLとのインストール方法は、テキストの第3章・2節以降を参照してください。
 
 ## Macの場合
 ターミナルで以下を実行
@@ -15,6 +15,12 @@ $ source .venv/bin/activate
 (.venv) $ pip install flask
 #dotenvをインストール
 (.venv) $ pip install python-dotenv
+#PostgreSQL関連のライブラリをインストール
+(.venv) $ pip install sqlalchemy
+(.venv) $ pip install flask_login
+(.venv) $ pip install psycopg2
+#openpyxlをインストール
+(.venv) $ pip install openpyxl
 #Flaskを起動
 (.venv) $ flask run
 ```
@@ -32,6 +38,12 @@ python -m venv .venv
 (.venv)　(略) pip install flask
 #dotenvをインストール
 (.venv)　(略) pip install python-dotenv
+#PostgreSQL関連のライブラリをインストール
+(.venv) (略) pip install sqlalchemy
+(.venv) (略) pip install flask_login
+(.venv) (略) pip install psycopg2
+#openpyxlをインストール
+(.venv) (略) pip install openpyxl
 #Flaskを起動
 (.venv)　(略) flask run
 ```
