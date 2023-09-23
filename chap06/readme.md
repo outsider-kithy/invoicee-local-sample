@@ -19,6 +19,8 @@ $ source .venv/bin/activate
 (.venv) $ pip install sqlalchemy
 (.venv) $ pip install flask_login
 (.venv) $ pip install psycopg2
+#openpyxlをインストール
+(.venv) $ pip install openpyxl
 #Flaskを起動
 (.venv) $ flask run
 ```
@@ -40,6 +42,8 @@ python -m venv .venv
 (.venv) (略) pip install sqlalchemy
 (.venv) (略) pip install flask_login
 (.venv) (略) pip install psycopg2
+#openpyxlをインストール
+(.venv) (略) pip install openpyxl
 #Flaskを起動
 (.venv)　(略) flask run
 ```
