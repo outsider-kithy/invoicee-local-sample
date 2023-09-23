@@ -57,18 +57,30 @@ def writeExcel(exportJobList, clientName):
         elif worksheet.cell(row = i, column = 4).value == "0%":
             zeroTaxTotal += worksheet.cell(row = i, column = 5).value
 
-    #8%税率の合計金額をB41セルに入力
+    #8%税率対象の合計金額をB41セルに入力
     worksheet["B41"].number_format = currentJPY
-    worksheet["B41"].value = lightTaxTotal * 0.08
+    worksheet["B41"].value = lightTaxTotal
 
-    #10%税率の合計金額をB42セルに入力
+    #8%税率の税額をC41セルに入力
+    worksheet["C41"].number_format = currentJPY
+    worksheet["C41"].value = int(lightTaxTotal * 0.08)
+
+    #10%税率対象の合計金額をB42セルに入力
     worksheet["B42"].number_format = currentJPY
-    worksheet["B42"].value = normalTaxTotal * 0.1
+    worksheet["B42"].value = normalTaxTotal
 
-    #0%税率の合計金額をB43セルに入力
+    #10%税率の税額をC42セルに入力
+    worksheet["C42"].number_format = currentJPY
+    worksheet["C42"].value = int(normalTaxTotal * 0.1)
+
+    #0%税率対象の合計金額をB43セルに入力
     worksheet["B43"].number_format = currentJPY
     worksheet["B43"].value = zeroTaxTotal
-
+    
+    #0%税率の税額をC43セルに入力
+    worksheet["C43"].number_format = currentJPY
+    worksheet["C43"].value = int(zeroTaxTotal * 0.0)
+    
     #消費税合計金額をB44セルに入力
     worksheet["B44"].number_format = currentJPY
     worksheet["B44"].value = "=SUM(B41:B43)"
