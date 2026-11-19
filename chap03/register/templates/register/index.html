@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ユーザー新規登録ページ</title>
+        <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+        <main>
+            <h2>ユーザー新規登録ページ</h2>
+            <p class="error">{{ error }}</p>
+            <form method="POST">
+                <input type="text" name="username" value="" placeholder="ユーザー名">
+                <input type="password" name="password" value="" placeholder="パスワード">
+                <input type="password" name="password_confirm" value="" placeholder="もう一度入力してください">
+                <input type="submit" name="submit" value="ユーザー登録">
+            </form>
+        </main>
+    </body>
+</html>
